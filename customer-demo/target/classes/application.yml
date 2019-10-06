@@ -1,0 +1,11 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: laycoding-customer
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://47.97.212.87:8000/eureka/
+    register-with-eureka: true #自身 不在向eureka注册
+    fetch-registry: true #启动时禁用client的注册

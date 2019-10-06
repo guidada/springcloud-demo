@@ -1,0 +1,27 @@
+server:
+  port: 9201
+spring:
+  rabbitmq:
+    host: 111.230.135.188
+    port: 5672
+    username: laycoding
+    password: laycoding
+  application:
+    name: config-server
+  cloud:
+    config:
+      uri: http://localhost:9100/
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: laycoding-config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://47.97.212.87:8000/eureka/

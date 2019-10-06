@@ -1,0 +1,20 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: laycoding-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.97.212.87:8000/eureka/
+
+zuul:
+  routes:
+    api-customer:
+      path: /api-customer/**
+      serviceId: laycoding-customer
+    api-order:
+      path: /api-order/**
+      serviceId: laycoding-order
+  #前缀
+  #prefix: /laycoding

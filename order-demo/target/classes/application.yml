@@ -1,0 +1,10 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: laycoding-order
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://47.97.212.87:8000/eureka/
+
